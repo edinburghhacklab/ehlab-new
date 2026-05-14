@@ -60,3 +60,6 @@
   selector = ["time#post-date", "time", "date"]
   extract_attribute = "datetime"
   fallback_to_content = true
+
+[widgets.fix-relative-links]
+  widget = "fix-relative-links"

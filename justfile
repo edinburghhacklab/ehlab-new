@@ -15,7 +15,7 @@ deploy:
 watch:
     #!/usr/bin/env bash
     set -e
-    watchexec -w site -w templates -w soupault.toml just build
+    watchexec -w site -w templates -w soupault.toml -w plugins just build
 
 # Serve the build directory on port 8000
 serve:
