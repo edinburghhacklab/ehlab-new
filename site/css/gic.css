@@ -5,10 +5,16 @@
 }
 
 #logo {
-    transition:transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, filter 0.1s, top 0.1s;
     margin: 0 auto;
     display: block;
     margin-bottom: 1rem;
+    position: relative;
+
+    &:active {
+        top: 1px;
+        filter: drop-shadow( 5px 5px 2px var(--colour-hover));
+    }
 }
 
 /* Spin on hover */
