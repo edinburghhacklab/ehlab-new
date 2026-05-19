@@ -2,13 +2,15 @@
 .jumbotron {
     text-align: center;
     padding: 2rem;
+    #logo {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
 }
 
 #logo {
     transition: transform 1.2s ease-in-out, filter 0.1s, top 0.1s;
-    margin: 0 auto;
     display: block;
-    margin-bottom: 1rem;
     position: relative;
 
     &:active {
@@ -55,6 +57,48 @@ main,
     @media (min-width: 1020px) {
         margin-right: auto;
         margin-left: auto;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-bottom: 3px solid var(--colour-brand);
+    margin-bottom: var(--spacing-6);
+
+    img {
+        height: var(--line-height-48);
+        padding: 0;
+        margin: 0 var(--spacing-6);
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0; padding: 0;
+        height: 100%;
+        li {
+            margin: 0;
+            box-sizing: border-box;
+
+            a {
+                padding: var(--spacing-6);
+                display: block;
+                box-sizing: border-box;
+                width: 100%; height: 100%;
+
+                color: var(--colour-text) !important;
+                text-decoration: none;
+
+                &:hover, &:focus {
+                    background: var(--colour-hover);
+                }
+            }
+        }
     }
 }
 

@@ -30,6 +30,12 @@
   selector = "head"
   action = "prepend_child"
 
+[widgets.header-navbar]
+  widget = "include"
+  file = "templates/header_navbar.html"
+  selector = "header#navbar"
+  action = "replace_element"
+
 [widgets.page-title]
   widget = "title"
   selector = "h1"
