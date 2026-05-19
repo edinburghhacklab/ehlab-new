@@ -14,10 +14,19 @@
 /* Spin on hover */
 #logo:hover { transform:rotate(360deg); }
 
+:root {
+    --size-page-width: 960px;
+    --size-gutter: 30px;
+    --size-gutter-half: calc(var(--size-gutter) / 2);
+}
+
 main,
 .legacy-post {
-    max-width: 110ch;
-    margin: 0 auto;
+    margin-top: 1lh;
+
+    max-width: var(--size-page-width);
+    margin-left: var(--size-gutter-half);
+    margin-right: var(--size-gutter-half);
 
     /* If a main element contains an aside, put it in a nice box at the top. */
     /* This is used to add a disclaimer on legacy posts */
@@ -28,14 +37,23 @@ main,
         margin: 1lh;
         padding: 1lh;
     }
+
+    /* On tablet, add full width gutters */
+    @media screen and (min-width: 641px) { /* tablet */
+        margin-right: var(--size-gutter);
+        margin-left: var(--size-gutter);
+    }
+
+    /* As soon as the viewport is greater than the width of the page plus the */
+    /* gutters, just centre the content instead of adding gutters. */
+    @media (min-width: 1020px) {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 /* If a div contains a main and an aside, then put it in a grid */
 div:has(main + aside) {
-    --size-gutter: 30px;
-    --size-gutter-half: calc(var(--size-gutter) / 2);
-    --size-page-width: 960px;
-
     display: grid;
     grid-gap: var(--size-gutter);
 
