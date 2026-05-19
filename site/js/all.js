@@ -36,4 +36,25 @@ function nextOpenNight() {
     var nextOpenNightElement = document.getElementById('next-open-night');
     if (nextOpenNightElement)
         nextOpenNightElement.innerText = `Our next open night is on the ${nextString}.`;
-})()
+})();
+
+// Convert <gallery> tags into inline galleries
+(function() {
+    for (var el of document.querySelectorAll('gallery')) {
+        // Collect all the child image tags, then clear the element and make an
+        // inline gallery.
+        // This is needed because lightgallery will append to the end of the element by default.
+        // It also deals with the fact that in markdown, there will usually be some extra <p> tags lying around
+        let imgs = Array.from(el.querySelectorAll('img'));
+        el.innerHTML = '';
+        var gallery = lightGallery(el, {
+            container: el,
+            closable: false,
+            showMaximizeIcon: true,
+            dynamic: true,
+            dynamicEl: imgs,
+        })
+        el.classList.add('active');
+        gallery.openGallery();
+    }
+})();

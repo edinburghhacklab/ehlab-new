@@ -30,6 +30,8 @@ cable and 14 tubes of silicone sealant.
 
 Here are some behind the scenes photos of it being built:
 
+<gallery>
+
 ![](./images/2016-01-19-14.55.12-450x337.jpg)
 ![](./images/2016-03-25-14.21.39-450x338.jpg)
 ![](./images/2016-03-27-19.09.56-338x450.jpg)
@@ -43,6 +45,8 @@ Here are some behind the scenes photos of it being built:
 ![](./images/2016-04-13-11.48.13-338x450.jpg)
 ![](./images/IMG_1016-1-450x338.jpg)
 ![](./images/2016-04-15-12.28.55-450x338.jpg)
+
+</gallery>
 
 And here's the final piece, doing it's thing:
 

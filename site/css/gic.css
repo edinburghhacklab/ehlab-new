@@ -152,6 +152,36 @@ img {
     max-width: 100%;
 }
 
+/* Basic fallback styling for galleries, for when JS is disabled / not working */
+gallery:not(.active) > p {
+    width: 100%;
+    position: relative;
+
+    img {
+        height: 10lh;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Avoid flashing all of the images before the JS loads, but still display it after a short time */
+    animation: fadeInAfterTime 3s linear;
+
+}
+@keyframes fadeInAfterTime {
+    0% { opacity: 0; }
+    99% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+gallery.active {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 30lh;
+}
+
 /* Selected parts from: */
 /* GIC.css Version 1.2.0
  * (c) Copyright Ariadne (me@aria.rip) 2026.
@@ -623,7 +653,7 @@ hr.visible { border-bottom: 1px solid var(--colour-border) }
 /* |___ |  | |__/ |\/| [__   */
 /* |    |__| |  \ |  | ___]  */
 /*                           */
-button {
+button:not(.lg-icon) {
     --button-bg: var(--green-shade-25);
     --button-bg-darker: var(--green-shade-50);
     --text: var(--colour-button-text);
