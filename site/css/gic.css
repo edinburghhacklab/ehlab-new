@@ -232,7 +232,9 @@ img {
     --black-tint-95: #f3f3f3;
     --white: #ffffff;
 
-    --colour-brand: var(--blue);
+    /* This is deliberately not blue, to avoid us looking tooo governmental */
+    /* purple was chosen because i like purple :) */
+    --colour-brand: var(--purple);
 
     --colour-text: var(--black);
     --colour-body-background: var(--white);
@@ -260,9 +262,9 @@ img {
 
     /* 'Surfaces' are our name for components that have different colour */
     /* palettes to typical page content. This is the generic surface. */
-    --colour-surface-background: var(--blue-tint-95);
+    --colour-surface-background: var(--purple-tint-95);
     --colour-surface-text: var(--black);
-    --colour-surface-board: var(--blue-tint-50);
+    --colour-surface-board: var(--purple-tint-50);
     --colour-button-text: var(--white);
 
     /* Dark theme, from catpuccin mocha */
