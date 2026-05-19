@@ -36,6 +36,7 @@
   default = "Edinburgh Hacklab"
   append = " | Edinburgh Hacklab"
   force = true
+  keep = true
 
 [index]
   sort_by = "date"
