@@ -1,0 +1,5 @@
+  * a gallery -- probably a short one on the front page and a longer one on /photos
+  * /visit and /chat, as convenient places to link to. the latter should probably explain irc a bit better, like this page does
+  * run lighthouse or something on it to check contrast is correct, incl in dark mode
+  * document the build/development process
+  * make the words better
