@@ -2,15 +2,6 @@
 build FLAGS='':
     soupault {{ FLAGS }}
 
-# Build with nix
-build-nix:
-    nix-build -E "(import <nixpkgs> {}).callPackage ./default.nix {}"
-
-deploy:
-    #!/bin/sh
-    OUT_PATH=$(nix-build -E "(import <nixpkgs> {}).callPackage ./default.nix {}")
-    rsync -rlpvP --checksum --del $OUT_PATH/ root@doggirl.love:/var/www/gic.aria.rip/
-
 # Watch for changes and rebuild
 watch:
     #!/usr/bin/env bash
@@ -25,5 +16,6 @@ serve:
 dev:
     just watch & just serve
 
+# Clear the build outputs and cache
 clean:
     rm -rf .soupault-cache build/
