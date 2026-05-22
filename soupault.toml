@@ -30,6 +30,12 @@
   selector = "head"
   action = "prepend_child"
 
+[widgets.footer]
+  widget = "include"
+  file = "templates/footer_shared.html"
+  selector = "body"
+  action = "append_child"
+
 [widgets.header-navbar]
   widget = "include"
   file = "templates/header_navbar.html"
