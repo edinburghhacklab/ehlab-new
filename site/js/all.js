@@ -52,6 +52,8 @@ function nextOpenNight() {
             closable: false,
             showMaximizeIcon: true,
             dynamic: true,
+            keyPress: false,
+            mousewheel: true,
             dynamicEl: imgs,
         })
         el.classList.add('active');
