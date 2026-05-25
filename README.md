@@ -37,6 +37,23 @@ to serve the website, and rebuild it on any changes, run `just dev`.
 
 to clear your cache and built output, run `just clean`.
 
+### writing posts
+
+to write a new post, make a markdown file named `site/$YEAR/$MONTH/post-title.md`. Start it out like this:
+
+```
+# Post title
+<date>2026-05-05</date>
+
+Some content...
+```
+
+To add images, place them in `site/$YEAR/$MONTH/images/`. You can then embed them in your markdown like this:
+
+```
+![some alt text](./images/name.png)
+```
+
 ### deploying
 
 `main` is automatically built and pushed by github actions. for now, you will need to make your own arrangements if  wanting to deploy draft versions (from PRs, etc)

@@ -21,8 +21,13 @@
   file = "templates/legacy_posts.html"
   content_selector = "content"
   content_action = "replace_element"
-  section = "fun/"
   path_regex = "(200.|201.|2020|2024)/.*$"
+
+[templates.posts]
+  file = "templates/posts.html"
+  content_selector = "content"
+  content_action = "replace_element"
+  path_regex = "(20[^012].|202[^01234])/.*$"
 
 [widgets.header]
   widget = "include"
@@ -54,9 +59,9 @@
   sort_by = "date"
   sort_descending = true
 
-[index.views.legacy]
-  path_regex = "(200.|201.|2020|2024)/.*$"
-  index_selector = "#legacy-posts-index"
+[index.views.posts]
+  path_regex = "[0-9]{4}/.*$"
+  index_selector = "#posts-index"
   index_item_template = """
     <article class="index-article">
         <span class="caption">{{date}}</span>
