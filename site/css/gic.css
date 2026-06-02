@@ -36,6 +36,7 @@
 
 main,
 .legacy-post {
+    min-height: 90vh;
     margin-top: 1lh;
 
     max-width: var(--size-page-width);
@@ -193,6 +194,8 @@ gallery.active {
     height: 0;
     padding-bottom: 30lh;
 }
+
+footer > div { width: 70ch; margin: 0 auto; }
 
 /* Selected parts from: */
 /* GIC.css Version 1.2.0
@@ -473,6 +476,7 @@ gallery.active {
 /*   88    88   88    8   8 88 "8 88   8 88  8 88    88  8   88    */
 /*   88    88   88    8eee8 88ee8 88   8 88  8 88    88  8   88 */
 html { background: var(--colour-body-background); }
+html:has(footer) { background: var(--colour-surface-background); }
 
 body {
     font-family: var(--font-variable);
@@ -661,6 +665,44 @@ hr.visible { border-bottom: 1px solid var(--colour-border) }
 
 /* utilities */
 .break-word { word-break: break-word; }
+
+/* _  _ ____ ____ ___  ____ ____    ____ ____ ____ ___ ____ ____  */
+/* |__| |___ |__| |  \ |___ |__/    |___ |  | |  |  |  |___ |__/  */
+/* |  | |___ |  | |__/ |___ |  \    |    |__| |__|  |  |___ |  \  */
+/*                                                                */
+header.masthead {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+
+    border-bottom: 1px solid transparent;
+    color: var(--colour-surface-text);
+    background: var(--colour-brand);
+
+    padding: 16px;
+
+    a {
+        display: inline;
+        margin-right: var(--spacing-2);
+        font-size: 30px;
+        text-decoration: none;
+        color: inherit;
+
+        &:visited { color: inherit; }
+    }
+}
+
+footer {
+    font-size: var(--font-size-19);
+    line-height: var(--line-height-19);
+
+    margin-top: var(--spacing-9);
+    padding: var(--spacing-5) 0;
+
+    border-top: 10px solid var(--colour-brand);
+    color: var(--colour-footer-text);
+    background: var(--colour-surface-background);
+}
 
 /* ____ ____ ____ _  _ ____  */
 /* |___ |  | |__/ |\/| [__   */
