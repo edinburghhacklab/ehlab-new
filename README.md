@@ -16,7 +16,7 @@ if you just want to see what it looks like, go [here](https://ehlab-new.aria.rip
 
 if you run linux: run `./scripts/enter-container.sh`. run `just dev` and then go to `http://localhost:8000`. the site will be rebuilt when you make changes.
 
-if you don't run linux, and don't want to think about setting this up 'properly': use the hacklab laptop, which is running linux.
+if you don't run linux, and don't want to think about setting this up 'properly': use the hacklab laptop, which is running linux. from the home directory, `cd ehlab-new; ./scripts/enter-container.sh`.
 
 ### installing requirements
 
@@ -45,20 +45,9 @@ to clear your cache and built output, run `just clean`.
 
 ### writing posts
 
-to write a new post, make a markdown file named `site/$YEAR/$MONTH/post-title.md`. Start it out like this:
+to write a new post, run `just new-post 'My post title'`. open the file it tells you to.
 
-```
-# Post title
-<date>2026-05-05</date>
-
-Some content...
-```
-
-To add images, place them in `site/$YEAR/$MONTH/images/`. You can then embed them in your markdown like this:
-
-```
-![some alt text](./images/name.png)
-```
+if you are using the hacklab laptop, you have permissions to push to [this git repo](github.com/edinburghhacklab/ehlab-new-labtop). make a PR from there when you're done.
 
 ### deploying
 
