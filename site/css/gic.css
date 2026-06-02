@@ -173,8 +173,14 @@ gallery:not(.active) > p {
 
     /* Avoid flashing all of the images before the JS loads, but still display it after a short time */
     animation: fadeInAfterTime 3s linear;
-
 }
+
+#index gallery > p > img {
+    display: none;
+
+    &:first-child { display: inline-block; }
+}
+
 @keyframes fadeInAfterTime {
     0% { opacity: 0; }
     99% { opacity: 0; }
