@@ -45,7 +45,7 @@
   widget = "include"
   file = "templates/header_navbar.html"
   selector = "header#navbar"
-  action = "replace_element"
+  action = "replace_content"
 
 [widgets.page-title]
   widget = "title"

@@ -2,10 +2,16 @@
 .jumbotron {
     text-align: center;
     padding: 2rem;
+    h1 { margin: 0; }
     #logo {
         margin: 0 auto;
         margin-bottom: 1rem;
     }
+}
+
+.jumbotron + #navbar > nav{
+    justify-content: center;
+    > a { display: none; }
 }
 
 #logo {
@@ -297,9 +303,10 @@ gallery.active {
     --colour-surface-board: var(--purple-tint-50);
     --colour-button-text: var(--white);
 
-    /* Dark theme, from catpuccin mocha */
     @media (prefers-color-scheme: dark) {
         color-scheme: dark;
+
+        /* Dark theme, from catppuccin mocha */
         --blue: #89b4fa;
         --blue-base: #89b4fa;
         --blue-tint-25: #6787bc;
