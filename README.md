@@ -12,9 +12,17 @@ if you just want to see what it looks like, go [here](https://ehlab-new.aria.rip
 
 ## building
 
+### tl;dr
+
+if you run linux: run `./scripts/enter-container.sh`. run `just dev` and then go to `http://localhost:8000`. the site will be rebuilt when you make changes.
+
+if you don't run linux, and don't want to think about setting this up 'properly': use the hacklab laptop, which is running linux.
+
 ### installing requirements
 
-requirements:
+if you're on a system with docker installed, you can run `./scripts/enter-container.sh` to enter an interactive shell with all the requirements you need.
+
+alternatively, install:
 
   - [just](https://just.systems/man/en/installation.html)
   - [soupault](https://soupault.net/install/)
@@ -22,8 +30,6 @@ requirements:
   - python 3 (for serving the local version)
 
 if you use nix, a `shell.nix` is provided.
-
-if you're comfortable developing in a docker container, you can build one with the provided `Dockerfile`.
 
 ### building
 
@@ -56,4 +62,4 @@ To add images, place them in `site/$YEAR/$MONTH/images/`. You can then embed the
 
 ### deploying
 
-`main` is automatically built and pushed by github actions. for now, you will need to make your own arrangements if  wanting to deploy draft versions (from PRs, etc)
+`main` is automatically built and pushed by github actions.
