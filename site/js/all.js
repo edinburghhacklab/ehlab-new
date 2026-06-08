@@ -27,7 +27,7 @@ function nextOpenNight() {
             withOrdinal = (n) => `${n}${suffixMap[pluralRule.select(n)]}`,
             dateFmt = Intl.DateTimeFormat(locale, { month: 'long' }),
             formatDate = (date) => `${withOrdinal(date.getDate())} of ${dateFmt.format(date)}`;
-        return formatDate(tuesday);
+        return "on the " + formatDate(tuesday);
     }
 }
 
@@ -35,7 +35,7 @@ function nextOpenNight() {
     var nextString = nextOpenNight();
     var nextOpenNightElement = document.getElementById('next-open-night');
     if (nextOpenNightElement)
-        nextOpenNightElement.innerText = `Our next open night is on the ${nextString}.`;
+        nextOpenNightElement.innerText = `Our next open night is ${nextString}.`;
 })();
 
 // Convert <gallery> tags into inline galleries
