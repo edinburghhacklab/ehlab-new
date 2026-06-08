@@ -49,6 +49,7 @@ function nextOpenNight() {
         let imgs = Array.from(el.querySelectorAll('img'));
         el.innerHTML = '';
         var gallery = lightGallery(el, {
+            licenseKey: 'LIG-1A46180D-94BD-4FEC-92E9-7C55CCA736E2',
             container: el,
             closable: false,
             showMaximizeIcon: true,
