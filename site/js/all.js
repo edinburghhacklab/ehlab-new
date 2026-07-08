@@ -13,6 +13,9 @@ function nextOpenNight() {
     var today = new Date();
     var day = today.getDay();
     var tuesdayDate = today.getDate() - day + (day === 0 ? -6 : 2);
+    if (tuesdayDate < today.getDate()) {
+        tuesdayDate += 7;
+    }
     var tuesday = new Date(today);
     tuesday.setDate(tuesdayDate);
     while (excludedOpenNights.includes(tuesday.toDateString())) {
