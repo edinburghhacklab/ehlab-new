@@ -12,12 +12,18 @@ const excludedOpenNights = [
 function nextOpenNight() {
     var today = new Date();
     var day = today.getDay();
-    var tuesdayDate = today.getDate() - day + (day === 0 ? -6 : 2);
-    if (tuesdayDate < today.getDate()) {
+
+    // get next tuesday
+    var daysUntilTuesday = (2 - today.getDay() + 7) % 7;
+    var tuesdayDate = today.getDate() + daysUntilTuesday;
+    if (tuesdayDate < today.getDate()) { // shouldn't happen but bweh
         tuesdayDate += 7;
     }
+
     var tuesday = new Date(today);
     tuesday.setDate(tuesdayDate);
+
+    // jump any excluded open nights
     while (excludedOpenNights.includes(tuesday.toDateString())) {
         tuesday.setDate(tuesday.getDate() + 7);
     }
