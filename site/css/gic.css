@@ -1,8 +1,19 @@
 /* Homepage jumbotron, with logo */
+@font-face {
+  font-family: 'Charka Petch';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/ChakraPetch-Bold.ttf) format('ttf');
+}
+
 .jumbotron {
     text-align: center;
     padding: 2rem;
-    h1 { margin: 0; }
+    h1 {
+        margin: 0;
+        font-family: "Chakra Petch";
+        font-weight: 700;
+    }
     #logo {
         margin: 0 auto;
         margin-bottom: 1rem;
