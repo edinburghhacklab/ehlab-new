@@ -11,7 +11,7 @@
     padding: 2rem;
     h1 {
         margin: 0;
-        font-family: "Chakra Petch";
+        font-family: "Chakra Petch", sans-serif;
         font-weight: 700;
     }
     #logo {
